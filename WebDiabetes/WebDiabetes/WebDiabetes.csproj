@@ -1,0 +1,289 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1037D3D0-84A0-49E5-8A0E-BF465ADF762D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDiabetes</RootNamespace>
+    <AssemblyName>WebDiabetes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\js\main.js" />
+    <Content Include="Global.asax" />
+    <Content Include="MyLib\css\bootstrap.min.css" />
+    <Content Include="MyLib\css\style.css" />
+    <Content Include="MyLib\img\about.jpg" />
+    <Content Include="MyLib\img\blog-1.jpg" />
+    <Content Include="MyLib\img\blog-2.jpg" />
+    <Content Include="MyLib\img\blog-3.jpg" />
+    <Content Include="MyLib\img\hero.jpg" />
+    <Content Include="MyLib\img\price-1.jpg" />
+    <Content Include="MyLib\img\price-2.jpg" />
+    <Content Include="MyLib\img\price-3.jpg" />
+    <Content Include="MyLib\img\price-4.jpg" />
+    <Content Include="MyLib\img\team-1.jpg" />
+    <Content Include="MyLib\img\team-2.jpg" />
+    <Content Include="MyLib\img\team-3.jpg" />
+    <Content Include="MyLib\img\testimonial-1.jpg" />
+    <Content Include="MyLib\img\testimonial-2.jpg" />
+    <Content Include="MyLib\img\testimonial-3.jpg" />
+    <Content Include="MyLib\img\user.jpg" />
+    <Content Include="MyLib\js\main.js" />
+    <Content Include="MyLib\lib\easing\easing.js" />
+    <Content Include="MyLib\lib\easing\easing.min.js" />
+    <Content Include="MyLib\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="MyLib\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="MyLib\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="MyLib\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="MyLib\lib\tempusdominus\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="MyLib\lib\tempusdominus\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="MyLib\lib\tempusdominus\js\moment-timezone.min.js" />
+    <Content Include="MyLib\lib\tempusdominus\js\moment.min.js" />
+    <Content Include="MyLib\lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="MyLib\lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="MyLib\lib\waypoints\links.php" />
+    <Content Include="MyLib\lib\waypoints\waypoints.min.js" />
+    <Content Include="Scripts\3.3.1-jquery.min.js" />
+    <Content Include="Scripts\sdist-48b75d8e2b0315c57a8be1b3994e302a.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ConnectionDiabetesDatabase.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KNeighbors.cs" />
+    <Compile Include="Models\ClassDiabetes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="MyLib\lib\owlcarousel\LICENSE" />
+    <Content Include="MyLib\scss\bootstrap.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_card.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_close.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_images.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_root.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_type.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="MyLib\scss\bootstrap\scss\_variables.scss" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Dataset.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageHF.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Home\Result.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52844</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44366/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Kết Quả";
+    Layout = "~/Views/Shared/_LayoutPageHF.cshtml";
+    <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
+}
+@{
+    string maxSick = ViewBag.maxSick;
+    string avgSick = ViewBag.avgSick;
+    WebDiabetes.Models.ClassDiabetes dataTest = ViewBag.dataTest;
+    double Predict_Proba = ViewBag.Predict_Proba;
+    string val = "Thông tin dữ liệu sau khi chuẩn đoán: ";
+    if (dataTest.Val == 0)
+    {
+        val += "không bị bệnh";
+    }
+    else { val += "bị bệnh với tỉ lệ mắc bệnh là " + Math.Round((Predict_Proba * 100), 2).ToString().Replace(',','.') + @"%"; }
+    
+    string testString = ViewBag.Test;
+}
+
+<div id='myDiv'></div>
+@if (dataTest.Val == 0)
+{
+    <h2 class="color-primary">@val</h2>
+}
+else { <h2 class="text-danger">@val</h2> }
+
+<script>
+
+
+    var test = {
+        x: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'],
+        y: @testString,
+        name: 'Dữ liệu dự đoán',
+        type: 'bar'
+    };
+
+
+
+    var graphMaxSick = {
+        type: 'scatter',
+        x: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'],
+        y: @maxSick,
+        mode: 'lines',
+        name: 'Dữ liệu bị bệnh lớn nhất',
+        line: {
+        color: 'rgb(210, 64, 82)',
+        width: 3
+        }
+    };
+
+    var graphAvgSick = {
+        type: 'scatter',
+        x: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'],
+        y: @avgSick,
+        mode: 'lines',
+        name: 'Dữ liệu bị bệnh trung bình',
+        line: {
+        color: 'rgb(29,197,221)',
+        width: 3
+        }
+    };
+
+    var data = [test, graphAvgSick, graphMaxSick];
+
+    var layout = {
+        //yaxis: {
+        //    range: [0, 1.2]
+        //}
+    };
+
+    Plotly.newPlot('myDiv', data, layout);
+
+</script>

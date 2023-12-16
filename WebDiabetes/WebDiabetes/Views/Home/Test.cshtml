@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Kiểm Tra";
+    Layout = "~/Views/Shared/_LayoutPageHF.cshtml";
+
+}
+
+@using (Html.BeginForm("Result", "Home"))
+{
+    <div class="text-center"><h2 class="color-primary">KHAI BÁO THÔNG TIN THỰC HIỆN KIỂM TRA</h2></div>
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <div class="mt-4">
+                <label class="form-label">Số lần mang thai</label>
+                <input type="text" class="form-control" name="Pregnancies" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Nồng độ glucose trong huyết tương hơn 2 giờ trong một bài kiểm tra dung nạp glucose qua đường miệng</label>
+                <input type="text" class="form-control" name="Glucose" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Huyết áp tâm trương (mm Hg)</label>
+                <input type="text" class="form-control" name="BloodPressure" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Tuổi</label>
+                <input type="text" class="form-control" name="Age" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="mt-4">
+                <label class="form-label">Độ dày nếp gấp da cơ tam đầu (mm)</label>
+                <input type="text" class="form-control" name="SkinThickness" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Chức năng phả hệ bệnh tiểu đường (một chức năng đánh giá khả năng mắc bệnh tiểu đường dựa trên tiền sử gia đình)</label>
+                <input type="text" class="form-control" name="DiabetesPedigreeFunction" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">Insulin huyết thanh trong 2 giờ</label>
+                <input type="text" class="form-control" name="Insulin" />
+            </div>
+            <div class="mt-4">
+                <label class="form-label">BMI</label>
+                <input type="text" class="form-control" name="BMI" />
+                @*<div class="d-flex">
+            <div class="w-25 me-2">
+                <label class="form-label">Cân nặng</label>
+                <input type="text" class="form-control" name="Weight" />
+            </div>
+            <div class="w-25">
+                <label class="form-label">Chiều cao</label>
+                <input type="text" class="form-control" name="Height" />
+            </div>
+        </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" type="submit">KIỂM TRA</button>
+    </div>
+}
+
+@if(Session["Err"] == "true")
+            {
+                <script>
+                    alert("Vui lòng nhập thông tin đầy đủ và chỉ được nhập số! Cảm ơn")
+                </script>
+            }
